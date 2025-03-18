@@ -1,0 +1,51 @@
+<html>
+<head>
+    <meta charset="utf-8" />
+    <!---CDN(Vue.jsが用意してくれるサーバーから読み込み)-->
+    <script src="https://unpkg.com/vue@3.0.0"></script>
+</head>
+<body>
+<div id="app1">
+    <!--Vueコンポーネントのデータを表示 -->
+    app1: {{ message }}
+</div>
+
+<div id="app2">
+    <!--Vueコンポーネントのデータを表示 -->
+    app2: {{ message }}
+</div>
+<script>
+    //Vueコンポーネントを定義
+    const App1 = {
+        // dataメソッドを定義 Vue.jsにこのデータを返すという宣言
+        data() {
+            return {
+                message : 'Hello Vue.js'
+            }
+        },
+    }
+
+    // Vueコンポーネントを定義
+    const App2 = {
+        // dataメソッドを定義 Vue.jsにこのデータを返すという宣言
+        data() {
+            return {
+                message : 'Vue.js 面白い'
+            }
+        },
+    }
+    // Vueアプリケーションを作成
+    app1 = Vue.createApp(App1)
+    // VueアプリケーションをHTML要素にマウント
+    app1.mount('#app1')
+
+    // Vueアプリケーションを作成
+    app2 = Vue.createApp(App2)
+    // VueアプリケーションをHTML要素にマウント
+    app2.mount('#app2')
+
+    // app1: Hello Vue.js
+    // app2: Vue.js 面白い
+</script>
+</body>
+</html>
