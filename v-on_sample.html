@@ -1,0 +1,40 @@
+<html>
+<head>
+    <meta charset="utf-8" />
+    <!-- CDN(Vue.jsが用意してくれるサーバーから読み込み) -->
+    <script src="https://unpkg.com/vue@3.0.0"></script>
+</head>
+<body>
+<div id="app1">
+    <p>{{ count }}回クリックした</p>
+    <!-- v-on:clickでクリックイベントを登録 -->
+    <button v-on:click="increment">+</button>
+    <button v-on:click="decrement">-</button>
+</div>
+<script>
+    // Vueコンポーネントを定義
+    const App1 = {
+        // dataメソッドを定義 Vue.jsにこのデータを返すという宣言
+        data() {
+            return {
+                count: 0
+            }
+        },
+        // methodsメソッドを定義
+        methods: {
+            // incrementメソッドを定義
+            increment() {
+                this.count+=1
+            },
+            decrement() {
+                this.count-=1
+            }
+        }
+    }
+    // Vueアプリケーションを作成
+    app1 = Vue.createApp(App1)
+    // VueアプリケーションをHTML要素にマウント
+    app1.mount('#app1')
+</script>
+</body>
+</html>
