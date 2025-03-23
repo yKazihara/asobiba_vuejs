@@ -1,0 +1,32 @@
+<html>
+<head>
+    <meta charset="utf-8" />
+    <!-- CDN(Vue.jsが用意してくれるサーバーから読み込み) -->
+    <script src="https://unpkg.com/vue@3.0.0"></script>
+</head>
+<body>
+<div id="app1">
+    <ul>
+        <template1></template1>
+    </ul>
+</div>
+
+<script>
+    // Vueコンポーネントを定義
+    const App1 = {}
+    // Vueアプリケーションを作成
+    const app = Vue.createApp(App1)
+
+    // Vueコンポーネントを定義
+    app.component('template1',{
+        template:`
+      <button>ボタン</button>
+      <br>
+      `
+    })
+
+    // VueアプリケーションをHTML要素にマウント
+    app.mount('#app1')
+</script>
+</body>
+</html>
