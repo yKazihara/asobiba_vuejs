@@ -1,14 +1,13 @@
 <script setup>
-const userName='nyan'
-console.log(userName)
+const title = 'Nyan programer'
 </script>
 
 <template>
-  <h1>VueSample タイトルだよ</h1>
+  <h1>Title: {{ title }}</h1>
 </template>
 
 <style>
-h1{
+h1 {
   color: green;
 }
 </style>
