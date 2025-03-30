@@ -5,7 +5,7 @@ let number = 9999
 
 <template>
   <h1>Title: {{ title }}</h1>
-  <h2>Number: {{ number }}</h2>
+  <h2>Number: {{ number - 1000 }}</h2>
 </template>
 
 <style>
