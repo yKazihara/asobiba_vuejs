@@ -1,5 +1,5 @@
 <script setup>
-import {ref} from "vue";
+import { ref, reactive } from 'vue'
 
 const title = ref('Nyan programer')
 const info = ref({
@@ -7,22 +7,36 @@ const info = ref({
   churu: 4
 })
 
-let number = ref(9999)
-console.log(number.value)
-console.log(info.value.nyans);
-console.log(info.value.churu);
-
-number.value = 2222
+let number = ref(5000)
+number.value = 3222
 
 function increment() {
   number.value += 1
-  console.log(number)
+  bossNyan.age += 1
+  bossNyan.bio = 'にゃーーーーん'
+  bossNyan.place.parkingArea = 'on the car'
+  bossNyan.eat = 'catFood'
 }
+
+const bossNyan = reactive({
+  name: 'Boss',
+  age: 10,
+  place: {
+    park: 'sandArea',
+    parkingArea: 'under the car'
+  },
+  eat: ref('food')
+})
+bossNyan.bio = 'nyaaaan'
 </script>
 
 <template>
   <h1>Title: {{ title }}</h1>
   <h2>Number: {{ number - 1000 }}</h2>
+  <h2>bossNyan age: {{ bossNyan.age }}</h2>
+  <h2>bossNyan bio: {{ bossNyan.bio }}</h2>
+  <h2>bossNyan parkingArea: {{ bossNyan.place.parkingArea }}</h2>
+  <h2>bossNyan eat: {{ bossNyan.eat }}</h2>
   <button @click="increment">ボタン</button>
 
   <h2>Nyans: {{ info.nyans }}</h2>
