@@ -28,6 +28,9 @@ const bossNyan = reactive({
   eat: ref('food')
 })
 bossNyan.bio = 'nyaaaan'
+
+const count = ref(5)
+const count2 = ref(30)
 </script>
 
 <template>
@@ -42,6 +45,11 @@ bossNyan.bio = 'nyaaaan'
   <h2>Nyans: {{ info.nyans }}</h2>
   <h3>Churu: {{ info.churu }}</h3>
   <h2>Nyans: {{ info }}</h2>
+
+  <div>{{ 10 + 20 }}</div>
+  <div>{{ count + 20 }}</div>
+  <div>{{ count + count2 }}</div>
+  <div>{{ count > 4 ? 'nyan' : 'nyaaaan' }}</div>
 </template>
 
 <style>
