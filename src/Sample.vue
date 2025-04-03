@@ -31,6 +31,9 @@ bossNyan.bio = 'nyaaaan'
 
 const count = ref(5)
 const count2 = ref(30)
+const message = ref('<h1>Nyan</h1>')
+const zennDashboard = ref('https://zenn.dev/dashboard')
+const zennId = ref('zenn-link')
 </script>
 
 <template>
@@ -50,6 +53,10 @@ const count2 = ref(30)
   <div>{{ count + 20 }}</div>
   <div>{{ count + count2 }}</div>
   <div>{{ count > 4 ? 'nyan' : 'nyaaaan' }}</div>
+
+  <div v-html="message"></div>
+  <a v-bind:id="zennId" v-bind:href="zennDashboard" target="_blank">Zenn dashboard</a><br>
+  <button disabled>Button</button>
 </template>
 
 <style>
