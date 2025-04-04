@@ -57,6 +57,7 @@ const zennId = ref('zenn-link')
   <div v-html="message"></div>
   <a v-bind:id="zennId" v-bind:href="zennDashboard" target="_blank">Zenn dashboard</a><br>
   <button disabled>Button</button>
+
 </template>
 
 <style>
