@@ -6,7 +6,7 @@ const count = ref(0)
 
 <template>
   <div><h2>CountUp++</h2></div>
-  <p>count:{{ count }}</p>
+  <p class="red">count:{{ count }}</p>
   <button @click="count++">+1</button>
 </template>
 
